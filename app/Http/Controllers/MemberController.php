@@ -11,7 +11,7 @@ class MemberController extends Controller
      */
     public function index()
     {
-        //
+        return 'MemberController@index';
     }
 
     /**
@@ -19,7 +19,7 @@ class MemberController extends Controller
      */
     public function create()
     {
-        //
+        return 'MemberController@create';
     }
 
     /**
@@ -27,7 +27,7 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'MemberController@store';
     }
 
     /**
@@ -35,7 +35,7 @@ class MemberController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return "MemberController@show, id: {$id}";
     }
 
     /**
@@ -43,7 +43,7 @@ class MemberController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return "MemberController@edit, id: {$id}";
     }
 
     /**
@@ -51,7 +51,7 @@ class MemberController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return "MemberController@update, id: {$id}";
     }
 
     /**
@@ -59,6 +59,6 @@ class MemberController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return "MemberController@destroy, id: {$id}";
     }
 }

@@ -11,7 +11,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return 'CategoryController@index';
     }
 
     /**
@@ -19,7 +19,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return 'CategoryController@create';
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'CategoryController@store';
     }
 
     /**
@@ -43,7 +43,7 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return "CategoryController@edit, id: {$id}";
     }
 
     /**
@@ -51,7 +51,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return "CategoryController@update, id: {$id}";
     }
 
     /**
@@ -59,6 +59,6 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return "CategoryController@destroy, id: {$id}";
     }
 }

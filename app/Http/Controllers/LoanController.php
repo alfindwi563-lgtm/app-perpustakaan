@@ -11,7 +11,7 @@ class LoanController extends Controller
      */
     public function index()
     {
-        //
+        return 'LoanController@index';
     }
 
     /**
@@ -19,7 +19,7 @@ class LoanController extends Controller
      */
     public function create()
     {
-        //
+        return 'LoanController@create';
     }
 
     /**
@@ -27,7 +27,7 @@ class LoanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'LoanController@store';
     }
 
     /**
@@ -35,7 +35,7 @@ class LoanController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return "LoanController@show, id: {$id}";
     }
 
     /**
@@ -43,7 +43,7 @@ class LoanController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return "LoanController@edit, id: {$id}";
     }
 
     /**
@@ -51,7 +51,7 @@ class LoanController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return "LoanController@update, id: {$id}";
     }
 
     /**
@@ -59,7 +59,7 @@ class LoanController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return "LoanController@destroy, id: {$id}";
     }
     public function kembalikan(string $id)
     {
