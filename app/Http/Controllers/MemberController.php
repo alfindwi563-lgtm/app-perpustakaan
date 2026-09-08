@@ -11,7 +11,13 @@ class MemberController extends Controller
      */
     public function index()
     {
-        return 'MemberController@index';
+        $members = [
+            ['id' => 1, 'nama' => 'Budi Santoso', 'nim' => '312350001', 'email' => 'budi@pens.ac.id', 'status' => 'aktif'],
+            ['id' => 2, 'nama' => 'Siti Aminah', 'nim' => '312350002', 'email' => 'siti@pens.ac.id', 'status' => 'non aktif'],
+            ['id' => 1, 'nama' => 'Putra Pertama', 'nim' => '312350003', 'email' => 'putra@pens.ac.id', 'status' => 'aktif'],
+        ];
+
+        return view('members.index', compact('members'));
     }
 
     /**
@@ -19,7 +25,7 @@ class MemberController extends Controller
      */
     public function create()
     {
-        return 'MemberController@create';
+        return view('members.create');
     }
 
     /**
@@ -27,7 +33,8 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        return 'MemberController@store';
+        return redirect()->route('members.index')
+            ->with('success', 'Data anggota berhasil ditambahkan (Dummy)!');    
     }
 
     /**
