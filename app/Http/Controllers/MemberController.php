@@ -6,16 +6,18 @@ use Illuminate\Http\Request;
 
 class MemberController extends Controller
 {
+    private array $members = [
+        ['id' => 1, 'nama' => 'Siti Aminah', 'nim' => '2310501001', 'email' => 'siti.aminah@pens.ac.id', 'nomor_telepon' => '081234567890', 'status' => 'aktif'],
+        ['id' => 2, 'nama' => 'Budi Santoso', 'nim' => '2310501002', 'email' => 'budi.santoso@pens.ac.id', 'nomor_telepon' => '081298765432', 'status' => 'aktif'],
+        ['id' => 3, 'nama' => 'Dewi Lestari', 'nim' => '2310501003', 'email' => 'dewi.lestari@pens.ac.id', 'nomor_telepon' => '081211122233', 'status' => 'nonaktif'],
+    ];
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $members = [
-            ['id' => 1, 'nama' => 'Budi Santoso', 'nim' => '312350001', 'email' => 'budi@pens.ac.id', 'status' => 'aktif'],
-            ['id' => 2, 'nama' => 'Siti Aminah', 'nim' => '312350002', 'email' => 'siti@pens.ac.id', 'status' => 'non aktif'],
-            ['id' => 1, 'nama' => 'Putra Pertama', 'nim' => '312350003', 'email' => 'putra@pens.ac.id', 'status' => 'aktif'],
-        ];
+        $members = $this->members;
 
         return view('members.index', compact('members'));
     }
